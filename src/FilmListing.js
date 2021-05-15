@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const FilmListing = () => {
-    return(
-        <div className="film-list">
-          <h1 className="section-title">FILMS</h1>
-        </div>
-    )
+
+class FilmListing extends Component {
+    render(){
+        let allFilms = this.props.filmList.map((film, index) =>
+        
+        <h1 key={index}>{film.title}</h1>
+        )
+        return(
+            <div className="film-list">
+                <h1 className="section-title">FILMS</h1>
+                {allFilms}
+            </div>
+        )
+    }
 }
 
 export default FilmListing;
