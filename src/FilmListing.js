@@ -4,15 +4,14 @@ import FilmRow from './FilmRow';
 class FilmListing extends Component {
     render(){
         
-        
-        
         let allFilms = this.props.filmList.map((film, index) =>
-        <FilmRow 
-            title={film.title}
-            year={film.release_date}
-            key={film.id}
-            pos={index}
-        />
+            <FilmRow 
+                title={film.title}
+                year={film.release_date}
+                poster={film.poster_path}
+                key={film.id}
+                pos={index}
+            />
         )
         return(
             <div className="film-list">
